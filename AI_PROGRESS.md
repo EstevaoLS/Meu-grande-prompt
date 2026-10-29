@@ -15,3 +15,7 @@ Histórico acumulado (somente acrescentar). Formato por entrada:
 
 ## 2026-10-28 — claude-code — validação pós-reinício
 - Claude Code interativo e app Codex buscaram no Mem0 com o filtro do protocolo e retornaram as mesmas 2 memórias. Integração validada nas duas ferramentas.
+
+## 2026-10-28 — claude-code — modo patrão (Claude Code → Codex)
+- Instalados `@openai/codex` 0.165.0 (global) e o plugin `codex@openai-codex` 1.0.6 no Claude Code (escopo user); `setup` pronto, login ChatGPT ativo, review gate desligado.
+- Regra "Modo patrão" no protocolo global e seção no README. Correção anterior: comandos com `"$HOME/..."` (PowerShell não expande `~`).

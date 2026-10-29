@@ -43,6 +43,18 @@ Cria só o que falta: `AGENTS.md` (ou anexa o bloco ai-kit ao existente), `CLAUD
 | `node "$HOME/.ai-kit/bin/mem0-check.mjs" tools` | Testa a conexão com o Mem0 e lista as ferramentas |
 | `node "$HOME/.ai-kit/bin/mem0-check.mjs" call <tool> '<json>'` | Chama uma ferramenta (ex.: `delete_memory`) |
 
+## Modo patrão: Claude Code delega ao Codex (opcional)
+
+Usa o plugin oficial da OpenAI [codex-plugin-cc](https://github.com/openai/codex-plugin-cc):
+
+```bash
+npm install -g @openai/codex
+claude plugin marketplace add openai/codex-plugin-cc
+claude plugin install codex@openai-codex --scope user
+```
+
+Diga "modo patrão" ao Claude Code: ele planeja e revisa, e o Codex implementa (`codex:codex-rescue`). Comandos úteis: `/codex:rescue`, `/codex:status`, `/codex:result`, `/codex:review`, `/codex:transfer` (leva a sessão para o Codex quando o limite do Claude estiver acabando). Não ative o review gate. O uso conta no limite do Codex.
+
 ## Escopo das memórias
 
 - `user_id = estevaols` em tudo; `app_id = <projeto>` ou `global`; `metadata.source = claude-code | codex`.

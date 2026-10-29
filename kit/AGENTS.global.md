@@ -40,6 +40,14 @@ Os agentes não compartilham conversas: a troca acontece só pelo Mem0 e pelos a
 - `force push` sem autorização explícita; commitar segredos ou configs locais; descartar ou sobrescrever trabalho de terceiros. Em conflito, falha de autenticação ou risco de perda de dados: pare e informe.
 - Desativar proteções ou contornar autenticação.
 
+## Modo patrão (só Claude Code, com o plugin `codex`)
+Ativado quando o usuário disser "modo patrão" ou pedir para delegar ao Codex; vale até ele dizer o contrário.
+- O Claude Code planeja, delega e revisa; o Codex implementa. Delegue cada tarefa pelo subagente `codex:codex-rescue` (ferramenta Agent), com um briefing autocontido: tarefa do plano, arquivos, critérios de aceite, comandos de teste e regras do `AGENTS.md`.
+- Uma tarefa por vez. Enquanto o Codex trabalha, o Claude não edita arquivos do projeto.
+- Ao receber o resultado: revise o diff contra o plano, rode os testes e peça correções ao Codex (`--resume`) até passar. Só então siga o fechamento de tarefa.
+- Aviso de limite próximo, ou antes de parar uma tarefa longa: atualize `AI_CONTEXT.md` e sugira ao usuário `/codex:transfer` para continuar no Codex.
+- Nunca ative o review gate (`/codex:setup --enable-review-gate`): ele pode consumir os limites em ciclo.
+
 ## Mem0 indisponível
 Continue só com os arquivos locais e anote a falha em `AI_CONTEXT.md`. Diagnóstico: `node "$HOME/.ai-kit/bin/mem0-check.mjs" tools`.
 
