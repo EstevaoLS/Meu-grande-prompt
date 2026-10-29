@@ -12,3 +12,6 @@ Histórico acumulado (somente acrescentar). Formato por entrada:
 - Decisões: MCP em vez de plugins (captura automática); `user_id=estevaols`, `app_id` por projeto ou `global`, `metadata.source`; `infer:false`.
 - Testes: Claude Code (`claude -p`) gravou; Codex (`codex exec`) leu; isca de outro projeto excluída; memórias de teste removidas. Detalhes: `docs/ai/tasks/mem0-shared-memory-setup.md`.
 - Próximo: rodar `ai-init.mjs` nos projetos existentes; reiniciar Claude Code e Codex.
+
+## 2026-10-28 — claude-code — validação pós-reinício
+- Claude Code interativo e app Codex buscaram no Mem0 com o filtro do protocolo e retornaram as mesmas 2 memórias. Integração validada nas duas ferramentas.

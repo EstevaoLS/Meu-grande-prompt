@@ -53,12 +53,14 @@ Fora do repositório (máquina do usuário): `~/.ai-kit/`, bloco em `~/.claude/C
 | Limpeza | 2 memórias e a entidade `outro-projeto-teste` removidas; `get_memories` vazio |
 | `ai-init.mjs` em projeto novo e existente, 2× | Cria o que falta; anexa blocos uma única vez; não sobrescreve |
 | `install.mjs` 2× | Idempotente |
+| Pós-reinício: Claude Code interativo (`mcp__mem0__search_memories`) | Retornou as 2 memórias do projeto + global |
+| Pós-reinício: app Codex (busca pelo protocolo) | Retornou as mesmas 2 memórias (IDs idênticos) |
 | `ai-report.mjs` neste documento | PDF gerado e verificado visualmente |
 
 ## Limitações e pendências
 - Isolamento entre projetos é por filtro, não por permissão: quem tem a chave lê todas as memórias da conta. Para clientes/projetos sensíveis, usar projeto Mem0 separado com outra chave.
 - Memórias ficam na nuvem do Mem0; exclusão via `delete_memory`/`delete_entities` (testada). Retenção e privacidade seguem a política do Mem0.
-- Claude Code e o app Codex precisam ser reiniciados após definir `MEM0_API_KEY` para enxergar a variável.
+- Claude Code e o app Codex precisam ser reiniciados após definir `MEM0_API_KEY` para enxergar a variável (feito e validado em 2026-10-28).
 - Codex Cloud não foi configurado (exige `MEM0_API_KEY` como Environment Variable do ambiente na nuvem).
 - A aderência ao protocolo depende do modelo seguir as instruções; não há hooks forçando gravação ou busca, por escolha.
 - Em outras máquinas, rodar `node install.mjs` após clonar; o `user_id` está fixo em `kit/AGENTS.global.md`.
