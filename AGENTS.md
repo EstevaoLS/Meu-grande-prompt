@@ -18,5 +18,5 @@ Regras compartilhadas deste projeto para Claude Code e Codex. `CLAUDE.md` import
 - Mem0 app_id: `meu-grande-prompt`
 - Protocolo: global, em `~/.ai-kit/AGENTS.global.md` (carregado automaticamente pelo Claude Code e pelo Codex).
 - `AI_CONTEXT.md`: estado atual, substituir por inteiro. `AI_PROGRESS.md`: histórico, somente acrescentar.
-- `docs/ai/tasks/<tarefa>.md`: documentação técnica. `docs/ai/reports/<tarefa>.pdf`: relatório (`node ~/.ai-kit/bin/ai-report.mjs`).
+- `docs/ai/tasks/<tarefa>.md`: documentação técnica. `docs/ai/reports/<tarefa>.pdf`: relatório (`node "$HOME/.ai-kit/bin/ai-report.mjs"`).
 <!-- ai-kit:end -->

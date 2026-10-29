@@ -11,5 +11,5 @@ Cache curto do estado atual (substituir por inteiro a cada atualização; ≤ 40
 - Mem0: 2 memórias reais (decisão do kit em `meu-grande-prompt`, preferência em `global`).
 
 ## Próximos passos
-- Aplicar `node ~/.ai-kit/bin/ai-init.mjs` nos projetos existentes.
+- Aplicar `node "$HOME/.ai-kit/bin/ai-init.mjs"` nos projetos existentes.
 - Opcional: Codex Cloud (definir `MEM0_API_KEY` como Environment Variable do ambiente).

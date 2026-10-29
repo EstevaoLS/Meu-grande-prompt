@@ -80,4 +80,4 @@ if (!codex) {
 let hasKey = Boolean(process.env.MEM0_API_KEY);
 if (!hasKey && process.platform === 'win32') hasKey = /MEM0_API_KEY/.test(run('reg', ['query', 'HKCU\\Environment', '/v', 'MEM0_API_KEY']).stdout ?? '');
 log(hasKey ? 'ok' : 'MISSING', 'MEM0_API_KEY (create at app.mem0.ai > API Keys; store as a user environment variable)');
-console.log('\nRestart Claude Code and Codex to load the changes. In each project: node ~/.ai-kit/bin/ai-init.mjs');
+console.log('\nRestart Claude Code and Codex to load the changes. In each project: node "$HOME/.ai-kit/bin/ai-init.mjs"');

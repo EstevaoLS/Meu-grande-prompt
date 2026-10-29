@@ -18,7 +18,7 @@ Os agentes não compartilham conversas: a troca acontece só pelo Mem0 e pelos a
    `filters: {"AND": [{"user_id": "estevaols"}, {"app_id": {"in": ["<app_id>", "global"]}}]}`.
    Tarefas triviais dispensam a busca. Não repita a mesma busca na tarefa.
 4. Confirme no código, no diff e na documentação atual o que a memória sugerir.
-5. Projeto do usuário sem `AI_CONTEXT.md`: rode `node ~/.ai-kit/bin/ai-init.mjs` na raiz (cria só o que falta, não sobrescreve). Em repositórios de terceiros, pergunte antes.
+5. Projeto do usuário sem `AI_CONTEXT.md`: rode `node "$HOME/.ai-kit/bin/ai-init.mjs"` na raiz (cria só o que falta, não sobrescreve). Em repositórios de terceiros, pergunte antes.
 
 ## Durante o trabalho
 - Atualize `AI_CONTEXT.md` quando o contexto mudar de forma relevante.
@@ -32,7 +32,7 @@ Os agentes não compartilham conversas: a troca acontece só pelo Mem0 e pelos a
 2. **`AI_PROGRESS.md`** — acrescente uma entrada curta e datada (tarefa, resultado, testes, próximo passo).
 3. **`AI_CONTEXT.md`** — substitua todo o conteúdo pelo estado atual (≤ 40 linhas).
 4. **Documentação** — `docs/ai/tasks/<tarefa>.md` (objetivo, implementação, arquivos alterados, decisões, testes e resultados, limitações e pendências) e o PDF:
-   `node ~/.ai-kit/bin/ai-report.mjs docs/ai/tasks/<tarefa>.md` → `docs/ai/reports/<tarefa>.pdf`. Confirme que o PDF foi gerado antes de citá-lo. Alterações triviais dispensam documentação.
+   `node "$HOME/.ai-kit/bin/ai-report.mjs" docs/ai/tasks/<tarefa>.md` → `docs/ai/reports/<tarefa>.pdf`. Confirme que o PDF foi gerado antes de citá-lo. Alterações triviais dispensam documentação.
 5. **Git** — rode os testes, `git status`, `git fetch`, revise o diff, adicione só os arquivos da tarefa, commit curto e push pelo remoto SSH. Siga o fluxo do projeto se ele exigir branch ou PR.
 
 ## Nunca
@@ -41,7 +41,7 @@ Os agentes não compartilham conversas: a troca acontece só pelo Mem0 e pelos a
 - Desativar proteções ou contornar autenticação.
 
 ## Mem0 indisponível
-Continue só com os arquivos locais e anote a falha em `AI_CONTEXT.md`. Diagnóstico: `node ~/.ai-kit/bin/mem0-check.mjs tools`.
+Continue só com os arquivos locais e anote a falha em `AI_CONTEXT.md`. Diagnóstico: `node "$HOME/.ai-kit/bin/mem0-check.mjs" tools`.
 
 ## Economia de tokens
 Leia só o necessário, prefira resumos, não recarregue arquivos grandes, evite verificações redundantes e não crie arquivos com a mesma finalidade.

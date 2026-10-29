@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Renders a task Markdown file into a styled PDF using a local Edge/Chrome in headless mode.
 //
-//   node ~/.ai-kit/bin/ai-report.mjs docs/ai/tasks/<tarefa>.md [out.pdf]
+//   node "$HOME/.ai-kit/bin/ai-report.mjs" docs/ai/tasks/<tarefa>.md [out.pdf]
 //
 // Default output: docs/ai/reports/<tarefa>.pdf next to the tasks folder. Set AI_REPORT_BROWSER to force a browser path.
 

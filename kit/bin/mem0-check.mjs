@@ -2,9 +2,9 @@
 // Smoke test for the hosted Mem0 MCP server (no dependencies, Node 18+).
 // Reads the key from MEM0_API_KEY and never prints it.
 //
-//   node ~/.ai-kit/bin/mem0-check.mjs tools                 # list tools and their fields (* = required)
-//   node ~/.ai-kit/bin/mem0-check.mjs schema <tool>         # full input schema of one tool
-//   node ~/.ai-kit/bin/mem0-check.mjs call <tool> '<json>'  # call one tool
+//   node "$HOME/.ai-kit/bin/mem0-check.mjs" tools                 # list tools and their fields (* = required)
+//   node "$HOME/.ai-kit/bin/mem0-check.mjs" schema <tool>         # full input schema of one tool
+//   node "$HOME/.ai-kit/bin/mem0-check.mjs" call <tool> '<json>'  # call one tool
 //
 // MEM0_MCP_URL overrides the endpoint (default https://mcp.mem0.ai/mcp).
 

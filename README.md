@@ -30,7 +30,7 @@ O instalador é idempotente (rode de novo após `git pull`) e só altera blocos 
 ## Em cada projeto (novo ou existente)
 
 ```bash
-node ~/.ai-kit/bin/ai-init.mjs
+node "$HOME/.ai-kit/bin/ai-init.mjs"
 ```
 
 Cria só o que falta: `AGENTS.md` (ou anexa o bloco ai-kit ao existente), `CLAUDE.md` (ou anexa `@AGENTS.md`), `AI_PROGRESS.md`, `AI_CONTEXT.md`, `docs/ai/tasks/`, `docs/ai/reports/`. O `app_id` do Mem0 vem do nome do repositório `origin` (ou da pasta) e fica gravado no `AGENTS.md`; use `--app-id <nome>` para escolher outro.
@@ -39,9 +39,9 @@ Cria só o que falta: `AGENTS.md` (ou anexa o bloco ai-kit ao existente), `CLAUD
 
 | Comando | Uso |
 |---|---|
-| `node ~/.ai-kit/bin/ai-report.mjs docs/ai/tasks/<t>.md` | Gera `docs/ai/reports/<t>.pdf` (Edge/Chrome headless) |
-| `node ~/.ai-kit/bin/mem0-check.mjs tools` | Testa a conexão com o Mem0 e lista as ferramentas |
-| `node ~/.ai-kit/bin/mem0-check.mjs call <tool> '<json>'` | Chama uma ferramenta (ex.: `delete_memory`) |
+| `node "$HOME/.ai-kit/bin/ai-report.mjs" docs/ai/tasks/<t>.md` | Gera `docs/ai/reports/<t>.pdf` (Edge/Chrome headless) |
+| `node "$HOME/.ai-kit/bin/mem0-check.mjs" tools` | Testa a conexão com o Mem0 e lista as ferramentas |
+| `node "$HOME/.ai-kit/bin/mem0-check.mjs" call <tool> '<json>'` | Chama uma ferramenta (ex.: `delete_memory`) |
 
 ## Escopo das memórias
 

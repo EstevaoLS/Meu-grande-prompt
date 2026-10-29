@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Prepares a project for the ai-kit protocol. Creates only what is missing; never overwrites.
 //
-//   node ~/.ai-kit/bin/ai-init.mjs [project-dir] [--app-id <id>]
+//   node "$HOME/.ai-kit/bin/ai-init.mjs" [project-dir] [--app-id <id>]
 //
 // Existing AGENTS.md gets the ai-kit block appended (once); existing CLAUDE.md gets `@AGENTS.md` appended (once).
 
